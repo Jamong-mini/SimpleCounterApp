@@ -1,37 +1,7 @@
-## 1\. SnapKit 설정
-
-코드베이스 UI를 작성할 때, 조금 더 간결한 문법을 사용하도록 도와주는 서드파티이다.  
-`NSLayoutConstraint`의 제약조건을 보다 편하고 짧게 작성할 수 있게 도와준다.
-
-### Swift Package Manager (SPM) 사용
-
-프로젝트에 서드파티 라이브러리를 가져와서 사용할 수 있도록 도와주는 도구며 애플이 지원하는 퍼스트 파티 도구이다.
-
-추가하는 방법은 아래와 같다.
-
-    1. 프로젝트 파일에서 TARGETS을 선택한다.
-
-    2. General 하단에 Frameworks, Libraries의 `+`버튼을 클릭한다.
-
-[##_Image|kage@8rS4O/btsKI2eBFtB/WUEXgPsVc5zlsd64W7RWxK/img.png|CDM|1.3|{"originWidth":1142,"originHeight":692,"style":"alignCenter","filename":"스크린샷 2024-11-14 오후 4.23.09.png"}_##]
-
-   3. Add Other…을 클릭 후 Add Package Dependency…를 선택
-
-[##_Image|kage@BIgah/btsKIubL3Od/6oFQaK5JmaaT0jqtkzG621/img.png|CDM|1.3|{"originWidth":1140,"originHeight":749,"style":"alignCenter"}_##]
-
-   4. Github의 SnapKit 공식 레파지토리에서 Clone url을 가져온다.
-
-[##_Image|kage@b7LBZZ/btsKIuCRNS7/UVMVe5B7k4ryV8n95XW5VK/img.png|CDM|1.3|{"originWidth":1253,"originHeight":557,"style":"alignCenter"}_##]
-
-   5. 검색창에 Clone url을 넣고 검색한다.
-
-[##_Image|kage@zgqiw/btsKH8tgDCH/AyhZDzB1aACnBkApj3uak1/img.png|CDM|1.3|{"originWidth":1080,"originHeight":605,"style":"alignCenter"}_##]
-
-   6. snapkit 패키지를 Add Package를 눌러서 추가한다.
-
----
-
-## 2\. 카운터 앱 요구사항
+## 1\. 카운터 앱 요구사항
+<p align="center">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbYq6Nv%2FbtsKJkfdRlh%2FYLcVmKFCEfOJfJhqzqpXIk%2Fimg.png" alt="최종 앱 결과">
+</p>
 
 -   **숫자를 띄울 라벨**
     -   숫자 라벨 : Int형 -> 0 부터 시작
@@ -70,7 +40,7 @@
 
 ---
 
-## 3\. 커스텀 UI 컴포넌트 (버튼) 만들기
+## 2\. 커스텀 UI 컴포넌트 (버튼) 만들기
 
 요구사항에서 스타일의 공통점과 개별점은 아래와 같다.  
 공통 - `textColor`, `width`, `height`, `cornerRadius`  
@@ -83,11 +53,13 @@
 -   CustomButton을 초기화 설정하는 과정에서 `super.init`을 주지 않으면 오류가 걸린다고 한다.
     -   이 부분은 `Class`의 `init`과 `super init`에 대해 학습하는 시간을 가져야 할 것 같다.
 
-[##_Image|kage@pxj7G/btsKIRxEp43/Pp6L3xi3vPJK1cMWnm1k1k/img.png|CDM|1.3|{"originWidth":842,"originHeight":300,"style":"alignCenter"}_##]
+<p align="center">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fpxj7G%2FbtsKIRxEp43%2FPp6L3xi3vPJK1cMWnm1k1k%2Fimg.png" alt="추가 이미지 예시">
+</p>
 
 ---
 
-## 4\. SnapKit을 사용하면 편한점 (전체 UI 포함)
+## 3\. SnapKit을 사용하면 편한점 (전체 UI 포함)
 
 ### SnapKit을 사용하면 편한점\[1\]
 
@@ -359,19 +331,7 @@ private func configureUI() {
 
 ---
 
-## 6\. SnapKit 빌드 오류
-
-Swift Package Manager를 사용하여 Snapkit을 사용하면 빌드 오류가 종종 발생한다고 한다.
-
-> No such file or directory: '/Users/Jamong/Library/Developer/Xcode/DerivedData/SimpleCounterApp-dpxghlehirdvvlavjiycfczdzvqk/Build/Products/Debug-iphonesimulator/PackageFrameworks/SnapKit-Dynamic.framework/SnapKit-Dynamic'
-
-해당 사항은 SnapKit-Dynamic을 삭제하면 되는데 설치를 했던 것처럼 `-`를 눌러 `SnapKit-Dynamaic`을 삭제하면 된다.
-
-[##_Image|kage@FrsEK/btsKIEL6zh8/xX22DdeNWSelD7mOxF423K/img.png|CDM|1.3|{"originWidth":1137,"originHeight":534,"style":"alignCenter"}_##]
-
----
-
-## 7\. 학습 한 것 또는 해야할 것
+## 6\. 학습 한 것 또는 해야할 것
 
 ### 학습한 것
 
